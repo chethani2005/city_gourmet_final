@@ -1,0 +1,896 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"); /* Import Dancing Script font */
+/*css for the index paage*/ 
+/* Body css */
+
+body, h1, h2, h3, p, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px; /* Reduce padding */
+  background-color: #000000;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-left: 300px;
+}
+
+.logo {
+  order: 0; /* Set order to 0 to move the logo to the left */
+}
+
+.logo img {
+  width: 200px; /* Set width of the logo image */
+  height: auto;
+}
+
+.navigation > div {
+  margin-left: 30px; /* Adjust spacing between navigation items */
+}
+
+.hamburger {
+  order: 1; /* Set order to 1 to move the hamburger menu to the right */
+  display: none; /* Hide the hamburger menu by default */
+}
+
+.hamburger img {
+  width: 30px; /* Adjust width of the hamburger menu icon */
+  height: auto;
+  display: none; /* Hide the hamburger menu by default */
+}
+
+
+
+
+/* Navigation styling */
+.navigation {
+  display: flex;
+  gap: 15px;
+  margin-right: 80px; /* Adjust margin */
+}
+main{
+  margin: 0;
+}
+
+.navigation a {
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #a8772d;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(175, 41, 41, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* Hero Section Styling */
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; 
+  animation: slideshow 20s infinite; 
+  transition: background-image 1s ease; 
+  position: relative; 
+  z-index: 0;
+  margin-top: 0; 
+  width: 100%; /
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)
+  ); 
+  z-index: -1;
+}
+/*the slide show css part to all of the pages */
+@keyframes slideshow {
+  0% {
+    background-image: url("./images/pexels-photo-9703865-666299a955346.webp");/*pexel*/
+  }
+  25% {
+    background-image: url("./images/wedding-666299466df54.webp");/*google chrom*/
+  }
+  50% {
+    background-image: url("./images/pexels-dziana-hasanbekava-7809784-66629966348c2.webp");/*pexel*/
+  }
+  75% {
+    background-image: url("./images/pexels-alisha-mishra-579430-1343504-66628797768e5.webp");/*pexel*/
+  }
+  100% {
+    background-image: url("./images/pexels-wolfram-k-226511-804170-666299cd61c0f.webp");/*pexel*/
+  }
+}
+
+@keyframes slideshowabout {
+  0% {
+    background-image: url("./images/pexels-photo-10682119-666299825de94.webp");/*pexel*/
+  }
+  25% {
+    background-image: url("./images/weddingf-66629948d4e8d.webp");/*google chrom*/
+  }
+  50% {
+    background-image: url("./images/pexels-alisha-mishra-579430-1343504-66628797768e5.webp");/*pexel*/
+  }
+  75% {
+    background-image: url("./images/pexels-photo-5779170-666299a740000.webp");/*pexel*/
+  }
+  100% {
+    background-image: url("./images/pexels-photo-5638415-66629968d701f.webp");/*pexel*/
+  }
+}
+
+@keyframes slideshowservices {
+  0% {
+    background-image: url("./images/pexels-fariphotography-905847.jpg");/*pexel*/
+  }
+  25% {
+    background-image: url("./images/pexels-polina-kovaleva-7270396-666299bd98a90.webp");/*pexel*/
+  }
+  50% {
+    background-image: url("./images/bitmap-330x330-66628789d0182.webp");/*google chrom*/
+  }
+  75% {
+    background-image: url("./images/pexels-photo-10682119-666299825de94.webp");/*pexel*/
+  }
+  100% {
+    background-image: url("./images/vegetables-6662994685317.webp");
+  }
+}
+
+@keyframes slideshowevents {
+  0% {
+    background-image: url("./images/pexels-photo-10682119-666299825de94.webp");/*pexel*/
+  }
+  25% {
+    background-image: url("./images/pexels-photo-6405809-666299a79220d.webp");/*pexel*/
+  }
+  50% {
+    background-image: url("./images/wedding-666299466df54.webp");/*google chrom*/
+  }
+  75% {
+    background-image: url("./images/pexels-photo-5718089-6662996adc9a5.webp");/*pexel*/
+  }
+  100% {
+    background-image: url("./images/pexels-photo-6479607-666299a85e54a.webp");/*pexel*/
+  }
+}
+
+@keyframes slideshowculinary {
+  0% {
+    background-image: url("./images/pexels-fariphotography-905847.jpg");/*pexel*/
+  }
+  25% {
+    background-image: url("./images/pexels-wolfram-k-226511-804170-666299cd61c0f.webp");/*pexel*/
+  }
+  50% {
+    background-image: url("./images/pexels-photo-9703892-666299825df91.webp");/*pexel*/
+  }
+  75% {
+    background-image: url("./images/pexels-photo-7235675-666299a8b7a3c.webp");/*pexel*/
+  }
+  100% {
+    background-image: url("./images/vegetables-6662994685317.webp");/*google chrom*/
+  }
+}
+
+.hero {
+  animation: slideshow 20s infinite; 
+}
+
+.aboutslideshow {
+  animation: slideshowabout 20s infinite; 
+}
+.servisesslideshow {
+  animation: slideshowservises 20s infinite;
+}
+.eventsslideshow {
+  animation: slideshowevents 20s infinite; 
+}
+.culinaryslideshow {
+  animation: slideshowculinary 20s infinite; 
+}
+
+
+
+
+/* index page  */
+.hero h1 {
+  font-size: 40px;
+  z-index: 1;
+  color: #f7f5f5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.cursive {
+  font-style: italic; /* Make the second line cursive*/
+  font-family: "Dancing Script", cursive; 
+  font-size: 140px; 
+}
+
+/* for the services page */
+
+.cursive2 {
+  font-style: italic; /* Make the second line cursive*/
+  font-family: "Dancing Script", cursive; 
+  font-size: 90px; 
+}
+.about2 {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px; /* Adjust as needed */
+  margin: auto;
+}
+
+.about2 h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.service-box {
+  border: 3px solid #c5963a;
+  padding: 20px;
+  margin: 10px auto; /* Center the boxes horizontally */
+  text-align: left;
+  max-width: 500px;
+  transition: transform 0.3s; /* Use transform for animation */
+  border-radius: 10px;
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* Scale up the box on hover */
+}
+
+.service-box h3 {
+  margin-top: 0;
+}
+
+.service-box p {
+  margin: 10px 0 0;
+}
+
+/* styles for the events page about3 section */
+.about3 {
+  text-align: center;
+  padding: 10px;
+  
+   
+}
+
+.about-box3 {
+  background-color: #f9f9f9;
+  border: 3px solid transparent; /* Initially transparent border */
+  border-radius: 10px;
+  padding: 20px; /* Adjusted padding */
+  margin: 30px auto; /* Center the box horizontally by setting left and right margins to auto */
+  max-width: 600px; /* Adjust as needed */
+  transition: border-color 0.3s; /* Transition for border color change */
+}
+
+.about-box3:hover {
+  border: 5px solid transparent;
+  border-color: #c5963a; /* Change the border color on hover */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.box {
+  border: 3px solid rgb(17, 16, 16);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Optional: Set a max-width for better readability */
+  text-align: left;
+  transition: border-color 0.3s; /* Simplified transition */
+}
+
+.box:hover {
+  border-color: rgb(206, 155, 43); /* Adjusted border color on hover */
+}
+.box3 {
+  background-color: rgb(206, 155, 43);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+p, ul {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.image-container img {
+  width: 400px; /* Make the images a little bigger */
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for image transform and box shadow */
+}
+
+.image-container img:hover {
+  transform: scale(1.05) rotate(3deg); /* Scale up the image on hover and tilt it slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a larger box shadow on hover */
+}
+
+
+
+
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+/*about  of the index.html  */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+.about-box {
+  background-color: #f9f9f9;
+  border: 10px solid #d89924;
+  border-radius: 40px;
+  padding: 100px;
+  margin: 10%;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth animation */
+}
+
+.about p {
+  text-align: justify;
+}
+
+/* Adding hover effects to the .about-box */
+.about-box:hover {
+  transform: scale(1.05); /* Scale up the box slightly */
+  box-shadow: 0 0 0 3px #d89924; /* Add additional outline effect */
+}
+
+
+/* Grid layout for images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  
+}
+
+.image-grid img {
+  width: 80%;
+  height: 300px; /* Set a fixed height for all images */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin: 15px; /* Add margin around each image */
+  margin-left: 50px;
+ 
+}
+
+.Introduction{
+  text-align: center;
+  margin: 200px;
+
+}
+
+/* recipes css */
+
+.community-box {
+  background-color: #f9f9f9;
+  border: 1px solid #c9700c;
+  border-radius: 10px;
+  padding: 50px;
+  margin:10px ;
+}
+.community  p{
+  text-align: center;
+}
+
+
+/*gallery to show case the services in service page */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0px;
+  padding: 10px;
+  max-width:fit-content ;
+
+}
+.gallery-container{
+display: grid;
+justify-content: center;
+align-items: center;
+}
+.gallery-container h1{
+  text-align: center;
+  margin: 20px;
+}
+
+.gallery-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery-item img {
+  width: 250px;
+  height: 200px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.25); /* Slightly enlarge the image on hover */
+}
+.Introduction h1{
+  text-align: center;
+  margin: 20px;
+}
+
+/* styles of youtube hosted  video */
+.Introduction iframe {
+  width: 1500px;
+  height: 600px;
+  border: none;
+}
+.video-section {
+  text-align: center; /* Center-align content */
+}
+
+.video-container {
+  position: relative;
+  width: 80%; /* Adjust the width of the video container */
+  max-width: 800px; /* Set a maximum width for better responsiveness */
+  margin: 0 auto; /* Center-align container */
+}
+
+.video-container iframe {
+  width: 100%; /* Make the video fill the container width */
+  height: 500px; /* Set the height of the video */
+}
+
+
+
+
+/* Footer Styling for every page  */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #b47030;
+  color: #fff; 
+  border-top: 1px solid #ffffff; 
+}
+/* The hamburger sign to the responsive*/
+
+.hamburger img {
+  width: 32px;
+  cursor: pointer;
+}
+.hamburger {
+  display: none;
+}
+
+
+
+/*styling for the contact page*/
+/* Base styles for positioning the box in the corner of the map */
+.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Styling for the output box to the map*/
+.geolocation{
+
+display: flex;
+justify-content:center ;
+flex-direction:column ;
+align-items: center;
+border-color: black;
+}
+
+
+
+/* Styling for the map box */
+#map { 
+  height: 400px;
+  width: 90%;
+  background-color: #e6e6fa; /* Light lavender background */
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Paragraph styling in the map */
+p {
+  padding: 0;
+  margin: 0;
+  color: #333; /* Darker text color */
+}
+
+
+/* style to the contact sheet */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* contact of sheet */
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Form elements */
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #050607;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #a3790e;
+}
+ 
+/* the style to the reciep page*/
+.about4 {
+  text-align: center;
+}
+
+.community-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.community-box h2 {
+  color: rgb(183, 134, 28);
+}
+
+.community-box p {
+  color: #333; /* Adjust text color as needed */
+}
+
+.com-box-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between images */
+}
+
+.com-box-images img {
+  width: 200px; /* Adjust image width as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.com-box-images img:hover {
+  transform: rotate(3deg); /* Adjust the degree of rotation as needed */
+}
+
+
+#recipe-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(193, 155, 49);
+  padding: 20px;
+  border-radius: 30px;
+}
+.menus:hover {
+  border: 3px solid black; /* Add a black border on hover */
+}
+
+
+.menu-box {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px; /* Adjust as needed */
+  height: 150px; /* Set a fixed height */
+  border-radius: 30px;
+}
+
+.recipes {
+  text-align: left; /* Center the content */
+  margin-top: 20px; /* Adjust as needed */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Adjust spacing between boxes */
+}
+
+.recipe-box {
+  width: 30%; /* Adjust as needed */
+  border: 3px solid rgb(184, 145, 54); /* Change border color to yellow */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+.recipe-box:hover {
+  box-shadow: 0 0 10px rgb(146, 117, 13); /* Apply yellow shadow on hover */
+}
+
+.guidelines {
+  width: 700px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left:33% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(184, 145, 54);
+  padding: 20px;
+  border-radius: 30px;
+}
+.guidelines:hover {
+  border: 3px solid rgb(9, 9, 7); /* Add a black border on hover */
+}
+
+@media only screen and (max-width: 1024PX) {
+  .cursive {
+    font-size: 100px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .navigation {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .images {
+    flex-direction: column;
+  }
+  .gallery{ 
+    grid-template-columns:repeat(1,1fr);
+  }
+  .guidelines{
+    margin-left: 10%;
+    width: 800px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}
+
+/* media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .cursive {
+    font-size: 100px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .navigation {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .images {
+    flex-direction: column;
+  }
+  .gallery{ 
+    grid-template-columns:repeat(1,1fr);
+  }
+  .guidelines{
+    margin-left: 5%;
+    width: 650px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+/* events css*/
+#containerpg4 {
+  padding: 0px;
+}
+
+#containerpg4 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#containerpg4 ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#containerpg4 ol li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#containerpg4 ol li img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.about1 {
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Horizontally align items */
+  font-size: 18px;
+}
+
+.about1 img {
+  max-width: 300px; /* Adjust the maximum width as needed */
+  height: auto;
+  margin: 10px 10px; /* Add margin to separate the images */
+  transition: transform 0.3s; /* Add transition for the tilt animation */
+}
+
+.image-container {
+  text-align: center; /* Center align the images horizontally */
+}
+
+.about1 img {
+  display: inline-block; /* Display images as inline-block elements */
+}
+
+.about1 img:hover {
+  transform: rotate(5deg); /* Tilt the image when hovered */
+}

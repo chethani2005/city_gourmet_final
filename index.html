@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>City Gourmet Catering and Culinary Solutions</title>
+</head>
+<body>
+    <!--header and vaigation sectio-->
+    <header>
+        <div class="logo"><img src="web assignm final\website assig\images\logo.jpg" alt="Logo"></div>
+        <div class="navigation">
+          
+            <div><a href="index.html" aria-current="page">Home</a></div> 
+            <div><a href="services.html">Services</a></div>
+            <div><a href="Recipes.html">Recipes</a></div>
+            <div class="dropdown"><a href="events.html">Events</a>
+                <div class="dropdown-content">
+                    <a href="weddings.html">Weddings</a>
+                    <a href="galas.html">Galas</a>
+                    <a href="corporates.html">Corporates</a>
+                    <a href="occasions.html">Occasions</a>
+                    <a href="holidays.html">Holidays</a>
+                </div> 
+            </div>
+            <div><a href="contactus.html">Contact Us</a></div>
+            <div class="hamburger">
+                <img id="menu-btn" src="images/menu-icon.png" alt="Menu" />
+            </div>          
+        </div>
+    </header>
+    
+    
+
+    <section class="hero">
+        <div id="container1">
+            <h1>Welcome to <br><span class="cursive">City Gourmet </span><br> Catering and Culinary Solutions</h1>
+        </div>
+    </section>
+    <!--main section-->
+    <main>
+        <section class="about">
+            <div class="about-box">
+                <h2>About Us</h2>
+                <p>Presenting The City Gourmet Catering and Culinary Solutions, the epitome of Chicago, Illinois, hospitality. Our esteemed establishment is committed to providing excellent cuisine, faultless service, and breathtaking experiences. We recognize the value of organizing events that people will remember, whether they are themed parties or festivities held at renowned cultural organizations or in exclusive locations. Additionally, among their offers are culinary consulting services for eateries and small-scale restaurants. The following goals are held by this company:</p>
+    
+                <p>Call City Gourmet Catering to elevate your events! We create unique culinary experiences for everything from weddings to business gatherings. From appetizers to desserts, our talented chefs craft delectable meals using only the freshest, local ingredients. Unwind and allow us to surpass your anticipations with flawless assistance and meticulous attention to detail. Reserve today for a feast to remember!</p>
+            </div>
+            <hr>
+        </section>
+    </main>
+<!--photo grid-->
+    <div class="image-grid">
+        <div>
+            <img src="./images/food-1-6662878e22fea.webp" alt="Gourmet food plate"> <!--web page -->
+            <p style="text-align: center; font-weight: bold;">"Satisfy your taste buds with our delicious cuisine!"</p>
+        </div>
+        <div>
+            <img src="./images/wedding-666299466df54.webp" alt="wedding with people"><!--web page-->
+            <p style="text-align: center; font-weight: bold;">"Elevate your special occasions with our experience and attention to detail!"</p>
+        </div>
+        <div>
+            <img src="./images/chefs-6662878af11f4.webp" alt="chef cooking"><!--web page-->
+            <p style="text-align: center; font-weight: bold;">"Indulge in excellent service provided by our skilled chefs!"</p>
+        </div>
+        <div>
+            <img src="./images/chef-talking-6662878aa4f1f.jpg" alt="chef talking"><!--web page-->
+            <p style="text-align: center; font-weight: bold;">"Experience the personalized touch as our chefs engage in discussions with clients!"</p>
+        </div>
+    </div>
+    <br><br><br><hr>
+    <section class="video-section">
+        <h1>Introduction Video</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/l5-v3_b61RM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <hr>
+
+    <!--gallery section-->
+    <div class="gallery-container">
+        <h1>GALLERY</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="./images/chefs-6662878af11f4.webp" alt="image of mini tacos">   <!--google chrom-->
+            </div>
+            <div class="gallery-item">
+                <img src="./images/green-6662879253241.webp" alt="platting the food"> <!--web page-->
+            </div>
+            <div class="gallery-item">
+                <img src="./images/hold-6662879320919.webp" alt="a finished plate decorated"><!--google chrom-->
+            </div>
+            <div class="gallery-item">
+                <img src="./images/good-5-6662879162044.webp" alt="a dessert"> <!--web page-->
+            </div>
+            <div class="gallery-item">
+                <img src="./images/goodf-666287917d2fa.webp" alt="a steak"><!--google cherom-->
+            </div>
+            <div class="gallery-item">
+                <img src="./images/images3-66628793bcf85.webp" alt="a chef cooking"><!--webpage-->
+            </div>
+        </div>
+    </div>
+    <!--footer section-->
+    
+    <div class="footer1">
+        citygourmetculinar@gamil.com  (123) 456-7890.            
+
+    </div>
+
+        
+    <div class="footer">
+        Chethani Rajapakshe CB011071
+    </div>
+       
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            navigation.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>
